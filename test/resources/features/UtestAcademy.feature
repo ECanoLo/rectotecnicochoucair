@@ -7,7 +7,7 @@ the user want login at the webpage the Utest and immediately get the projects of
         Scenario Outline: Utest_Login
         Given the user Elizabeth open the webpage the Utest Longin in
         When the user Elizabeth insert <usser_email> and <password>
-        Then the page open profiles the user Elizabeth <clickacademy>
+        Then the page open profiles the user Elizabeth <strCourse>
      Examples:
-        |usser_email|password|clickacademy|
+        |usser_email|password|strCourse|
         |ecanolopera@gmail.com|emcEcl2102|Academy|
