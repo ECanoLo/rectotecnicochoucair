@@ -23,20 +23,20 @@ public class UtestStepDefinitions {
         OnStage.setTheStage(new OnlineCast());
 
     }
-    @Given("^than ecanolopera@gmail.com wants to learn and certificate as Testing at the Utest$")
-    public void thanEcanoloperagmailcomWantsToLearnAndCertificateAsTestingAtTheUtest(List<UtestData> utestData) throws Exception {
-        OnStage.theActorCalled("ecanolopera@gmailcom").wasAbleTo(OpenUp.thePage(), Login.
-                onThePage(utestData.get(0).getEmailUser(),utestData.get(0).getStrPassword()));
+    @Given("^the user Elizabeth open the webpage the Utest Longin in$")
+    public void the_user_elizabeth_open_the_webpage_the_utest_longin_in(List<UtestData> utestData) throws Exception {
+        OnStage.theActorCalled("Elizabeth").wasAbleTo(OpenUp.thePage(), Login.
+                onThePage(utestData.get(0).getusseremail(),utestData.get(0).getpassword()));
 
     }
-    @When("^he search for the course testing basics on the Utest academy platform$")
-    public void heSearchForTheCourseTestingBasicsOnTheUtestAcademyPlatform(List<UtestData> utestData) throws Exception {
+    @When("^the user Elizabeth insert (.+) and (.+)$")
+    public void the_user_elizabeth_insert_and(List<UtestData> utestData) throws Exception {
         OnStage.theActorInTheSpotlight().attemptsTo(Search.the(utestData.get(0).getStrCourse()));
 
 
     }
-    @Then("^he finds the course called Testing Basics$")
-    public void heFindsTheCourseCalledTestingBasics(List<UtestData> utestData) throws Exception  {
+     @Then("^the page open profiles the user Elizabeth (.+)$")
+    public void the_page_open_profiles_the_user_elizabeth(List<UtestData> utestData) throws Exception  {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(utestData.get(0).getStrCourse())));
     }
 
