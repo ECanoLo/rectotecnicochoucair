@@ -9,23 +9,23 @@ import net.serenitybdd.screenplay.actions.Enter;
 import org.nibor.autolink.internal.EmailScanner;
 
 public class Login implements Task {
-    private String emailUser;
+    private String usser_email;
 
-    public Login(String emailUser, String strPassword) {
-        this.emailUser = emailUser;
-        this.strPassword = strPassword;
+    public Login(String usser_email, String password) {
+        this.usser_email = usser_email;
+        this.password = password;
     }
 
-    private String strPassword;
-    public static  Login onThePage(String emailUser,String strPassword){
-        return Tasks.instrumented(Login.class, emailUser, strPassword);
+    private String password;
+    public static  Login onThePage(String usser_email,String password){
+        return Tasks.instrumented(Login.class, usser_email, password);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(UtestLoginPage.LOGIN_BUTTON),
-                Enter.theValue(emailUser).into(UtestLoginPage.INPUT_USER),
-                Enter.theValue(strPassword).into(UtestLoginPage.INPUT_PASSWORD),
+                Enter.theValue(usser_email).into(UtestLoginPage.INPUT_USER),
+                Enter.theValue(password).into(UtestLoginPage.INPUT_PASSWORD),
                 Click.on(UtestLoginPage.ENTER_BUTTON)
         );
     }
