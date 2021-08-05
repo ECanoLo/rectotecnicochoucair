@@ -1,16 +1,13 @@
 #Autor Elizabeth Cano
 @stories
-Feature Utest
-As a user, I want to learn how improve skills as a tester and new topics, but the most important get certified as Tester.
+Feature: Utest_login
+the user want login at the webpage the Utest and immediately get the projects offers
 
 @scenario
-        Scenario OutLine: Search for a Testing basics course
-        Given than ecanolopera@gmailcom wants to learn and certificate as Testing at the Utest
-        |emailUser |strPassword |
-        |<emailUser> |<strPassword |
-        When he search for the course testing basics on the Utest academy platform
-        |strCourse|
-        |<strCourse>|
-        Then he finds the course called Testing Basics
-        |strCourse|
-        |<strCourse>|
+        Scenario Outline: Utest_Login
+        Given the user Elizabeth open the webpage the Utest Longin in
+        When the user Elizabeth insert <usser_email> and <password>
+        Then the page open profiles the user Elizabeth <clickacademy>
+     Examples:
+        |usser_email|password|clickacademy|
+        |ecanolopera@gmail.com|emcEcl2102|Academy|
