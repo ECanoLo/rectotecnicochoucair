@@ -4,22 +4,22 @@ package co.com.choucair.automatizacion.utest.model;
 import org.nibor.autolink.internal.EmailScanner;
 
 public class UtestData {
-    private String emailUser;
+    private String usser_email;
 
-    public String getEmailUser() {
-        return emailUser;
+    public String getusser_email() {
+        return usser_email;
     }
 
-    public void setEmailUser(String emailUser) {
-        this.emailUser = emailUser;
+    public void setusser_email(String usser_email) {
+        this.usser_email = usser_email;
     }
 
-    public String getStrPassword() {
-        return strPassword;
+    public String getpassword() {
+        return password;
     }
 
-    public void setStrPassword(String strPassword) {
-        this.strPassword = strPassword;
+    public void setpassword(String password) {
+        this.password = password;
     }
 
     public String getStrCourse() {
@@ -30,6 +30,6 @@ public class UtestData {
         this.strCourse = strCourse;
     }
 
-    private String strPassword;
+    private String password;
     private String strCourse;
 }
